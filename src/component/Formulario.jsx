@@ -4,6 +4,7 @@ import React, { useState } from 'react'
   const [descripcion, setDescripcion] = useState('')
   const [monto, setMonto] = useState('')
   const [categoria, setCategoria] = useState('')
+  const [tipo, setTipo] = useState('egreso')
   const fechaActual = new Date().toLocaleDateString()
    const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,13 +13,16 @@ import React, { useState } from 'react'
       descripcion,
       monto: parseFloat(monto),
       fecha: fechaActual,
-      categoria
+      categoria,
+      tipo
+
     })
 
     setDescripcion('')
     setMonto('')
     setCategoria('')
-    setVisible(false)
+
+    cerrarFormulario();
   }
     return (
      <form className="formulario" onSubmit={handleSubmit}>
@@ -44,9 +48,7 @@ import React, { useState } from 'react'
               onChange={(e) => setMonto(e.target.value)}
             />
           </label>
-
           <br />
-
           <label>
             Categoría:
             <select
@@ -61,6 +63,19 @@ import React, { useState } from 'react'
               <option value="otros">Otros</option>
             </select>
           </label>
+          <br />
+           <label>
+            Tipo:
+            <select
+              name="tipo"
+              value={tipo}
+              onChange={(e) => setTipo(e.target.value)}
+            >
+              <option value="egreso">Egreso</option>
+              <option value="ingreso">Ingreso</option>
+            </select>
+           </label>
+
           <button type="submit">Guardar</button>
 
           <button type="button" onClick={cerrarFormulario}>
