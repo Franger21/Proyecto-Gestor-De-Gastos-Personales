@@ -17,7 +17,7 @@ function Header({ agregarGasto }) {
     setVisible(false)
     setDescripcion('')
     setMonto('')
-    setCategoria('')
+
   }
   
 
@@ -32,10 +32,16 @@ function Header({ agregarGasto }) {
           AGREGAR
         </button>
       </header>
-
-      {visible && (
-        <Formulario agregarGasto={agregarGasto} cerrarFormulario={cerrarFormulario}/>
-      )}
+{visible && (
+  <div className="overlay" onClick={cerrarFormulario}>
+    <div className="modal" onClick={(e) => e.stopPropagation()}>
+      <Formulario 
+        agregarGasto={agregarGasto} 
+        cerrarFormulario={cerrarFormulario}
+      />
+    </div>
+  </div>
+)}
     </>
   )
 }

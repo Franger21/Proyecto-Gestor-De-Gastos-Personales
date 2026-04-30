@@ -32,6 +32,23 @@ header button:hover{
     color: #7e7656;
     cursor: pointer;
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* transparencia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* CAJA DEL FORM */
+.modal {
+  background: transparent; /* 👈 importante */
+}
 .formulario {
     margin: 40px auto;
     background: #373232;
@@ -83,4 +100,19 @@ header button:hover{
     color: #7e7656;
     cursor: pointer;
 }
-.formulario
+.formulario categoria {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.formulario select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    box-sizing: border-box;
+} 

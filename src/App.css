@@ -1,7 +1,98 @@
-main{
+/* CONTENEDOR PRINCIPAL */
+.main-content {
+  padding: 40px;
+  background-color:rgb(233, 219, 200);
+  min-height: 100vh;
+  max-width: 900px;
+  margin: auto;
+}
+.contenido {
+  width: 100%;
+  max-width: 800px;
+  background: #fefaf5; /* tono crema */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-top: 6px solid #8b6f47; /* tu marrón */
+  transition: 0.3s;
+
+} 
+
+/* FILTROS */
+.filtros {
   display: flex;
-  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.filtros label {
+  font-weight: 500;
+}
+
+.filtros select {
+  margin-left: 10px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* TITULO */
+h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* 🔥 CADA GASTO (BIEN HECHO) */
+.gasto {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 1em;
-  
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border-left: 6px solid #ef4444;
+}
+
+/* INGRESO EN VERDE */
+.gasto.ingreso {
+  border-left: 6px solid #22c55e;
+}
+
+/* TEXTO */
+.gasto p {
+  margin: 0;
+}
+
+.gasto small {
+  color: #666;
+}
+
+/* MONTO */
+.monto {
+  font-weight: bold;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+/* BOTÓN */
+.eliminar {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.eliminar:hover {
+  background-color: #dc2626;
+}
+
+/* TOTAL */
+.total {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: bold;
 }

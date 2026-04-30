@@ -7,6 +7,10 @@ import React, { useState } from 'react'
   const [tipo, setTipo] = useState('egreso')
   const fechaActual = new Date().toLocaleDateString()
    const handleSubmit = (e) => {
+    if (!descripcion || !monto || monto <= 0 || !categoria) {
+  alert("Completá todos los campos correctamente");
+  return;
+}
     e.preventDefault();
 
      agregarGasto({
