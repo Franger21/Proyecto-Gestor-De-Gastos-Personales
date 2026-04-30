@@ -7,7 +7,7 @@
   function App() {
   const [gastos, setGastos] = useState([]);
   const [categoria, setCategoria] = useState('');
-  const agregarGasto = (nuevoGasto) => { Limite(gastos, nuevoGasto, setGastos); };
+const agregarGasto = (nuevoGasto) => { Limite(gastos, nuevoGasto, setGastos); };
 
 
     const total = gastos.reduce((acum, gasto) => acum + parseFloat(gasto.monto), 0);
