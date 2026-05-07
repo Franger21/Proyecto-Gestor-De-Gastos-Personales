@@ -25,7 +25,6 @@ import React, { useState } from 'react'
     setDescripcion('')
     setMonto('')
     setCategoria('')
-
     cerrarFormulario();
   }
     return (

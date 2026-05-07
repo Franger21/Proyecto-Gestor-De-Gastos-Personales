@@ -4,9 +4,7 @@ import React, { useState } from 'react'
 
 function Header({ agregarGasto }) {
   const [visible, setVisible] = useState(false)
-  const [descripcion, setDescripcion] = useState('')
-  const [monto, setMonto] = useState('')
-  const fechaActual = new Date().toLocaleDateString()
+
 
 
   const mostrarFormulario = () => {
@@ -15,12 +13,8 @@ function Header({ agregarGasto }) {
 
   const cerrarFormulario = () => {
     setVisible(false)
-    setDescripcion('')
-    setMonto('')
-
   }
   
-
   return (
     <>
       <header>

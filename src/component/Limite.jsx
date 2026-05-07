@@ -1,4 +1,4 @@
-export default function Limite(gastos, nuevoGasto, setGastos) {
+export default function aplicarLimite(gastos, nuevoGasto) {
   const limite = 5000000;
 
   const totalEgresos = gastos
@@ -9,8 +9,8 @@ export default function Limite(gastos, nuevoGasto, setGastos) {
     nuevoGasto.tipo === 'egreso' &&
     totalEgresos + nuevoGasto.monto > limite
   ) {
-    alert('⚠️ Superaste el límite');
+    alert('Superaste el límite');
   }
 
-  setGastos([...gastos, nuevoGasto]);
+
 }

@@ -70,7 +70,7 @@ export default function ListaDeGastos({ gastos, eliminarGasto }) {
 
           <div>
             <span className="monto">${gasto.monto}</span>
-            <button
+            <button 
               className="eliminar"
               onClick={() => eliminarGasto(index)}
             >
